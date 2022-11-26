@@ -121,8 +121,8 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
     <TableCell
       style={{
         ...tableItemTextStyles,
-        textAlign,
         minWidth: "130px",
+        textAlign,
       }}
     >
       {key === "original" && `${CCY} `}

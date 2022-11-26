@@ -37,7 +37,18 @@ function App() {
     fetchUsers();
   }, []);
 
-  return <Table items={users} headings={headings} />;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        height: "90vh",
+        justifyContent: "center",
+      }}
+    >
+      <Table items={users} headings={headings} />
+    </div>
+  );
 }
 
 export default App;
