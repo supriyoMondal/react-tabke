@@ -13,27 +13,9 @@ import {
 import { colors } from "../theme/colors";
 import TableListItem from "./TableListItem";
 
-const getNumberFromString = (str) => {
-  return Number(str.match(/\d+/)[0]);
-};
-
-const comparator = (a, b) => {
-  if (a > b) {
-    return 1;
-  }
-  if (b > a) {
-    return -1;
-  }
-  return 0;
-};
-
-const getNettedCount = (item) => {
-  return item?.netting_summary?.netted || 0;
-};
-
 const Table = ({ items, headings }) => {
   const [sortProps, setSortProps] = useState({
-    order: "dsc",
+    order: "desc",
     orderBy: "",
   });
   const { order, orderBy } = sortProps;
@@ -114,7 +96,31 @@ Table.propTypes = {
 
 export default Table;
 
+const getNumberFromString = (str) => {
+  return Number(str.match(/\d+/)[0]);
+};
+
+const comparator = (a, b) => {
+  if (a > b) {
+    return 1;
+  }
+  if (b > a) {
+    return -1;
+  }
+  return 0;
+};
+
+const getNettedCount = (item) => {
+  if (typeof item?.netting_summary?.netted === "number") {
+    return item?.netting_summary?.netted;
+  }
+  return -1;
+};
+
 function handleSortTableItems(items = [], order, orderBy) {
+  if (!order) {
+    return items;
+  }
   const newItems = [...items];
   newItems.sort((a, b) => {
     if (orderBy === "payer") {

@@ -30,3 +30,27 @@
   height: 18px !important;
   width: 18px !important;
 }
+
+.pie-chart {
+  height: 48px;
+  width: 48px;
+  border: 1px solid #5f99dd;
+  border-radius: 24px;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 12px;
+}
+
+.status {
+  display: flex !important;
+  min-width: 160px;
+  flex-direction: row;
+  background-color: #fefaed;
+  align-items: center;
+  height: 64px;
+}
