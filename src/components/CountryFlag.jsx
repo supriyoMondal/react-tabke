@@ -24,4 +24,4 @@ const CountryFlag = () => {
   );
 };
 
-export default CountryFlag;
+export default React.memo(CountryFlag, () => true);

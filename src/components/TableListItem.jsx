@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import { colors } from "../theme/colors";
 import CountryFlag from "./CountryFlag";
+import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
+import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
+import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 
 const intl = new Intl.NumberFormat("en-IN", {
   maximumSignificantDigits: 8,
@@ -47,6 +50,48 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
         }}
       >
         {due_date?.split(" ")[0]}
+      </TableCell>
+    );
+  }
+
+  if (key === "status") {
+    return (
+      <TableCell
+        style={{
+          display: "flex",
+          minWidth: "140px",
+          flexDirection: "row",
+          backgroundColor: "#fefaed",
+          height: "auto",
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{ backgroundColor: colors.success }}
+          className="icon-container center"
+        >
+          <LibraryAddIcon className="icon" />
+        </div>
+
+        <div className="line" style={{ backgroundColor: colors.success }} />
+        <div
+          style={{ backgroundColor: colors.success }}
+          className="icon-container center"
+        >
+          <AssignmentOutlinedIcon className="icon" />
+        </div>
+
+        <div className="line" style={{ backgroundColor: colors.success }} />
+
+        <div
+          className="icon-container center"
+          style={{
+            color: colors.primary,
+            border: "1px solid",
+          }}
+        >
+          <GridViewOutlinedIcon className="icon" />
+        </div>
       </TableCell>
     );
   }

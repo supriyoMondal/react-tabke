@@ -7,3 +7,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container {
+  height: 32px;
+  width: 32px;
+  border-radius: 18px;
+  color: #fff;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+}
+
+.icon {
+  height: 18px !important;
+  width: 18px !important;
+}
