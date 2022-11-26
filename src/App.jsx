@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Table from "./components/Table";
@@ -12,24 +13,24 @@ const headings = [
   { title: "Status", sortAble: true, key: "status" },
 ];
 
-function App() {
-  const [users, setUsers] = useState([]);
+const USER_CACHE = "@cached-users";
 
-  const fetchUsers = () => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-        setUsers([]);
-      });
+function App() {
+  const [users, setUsers] = useState(() => {
+    const cachedData = localStorage.getItem(USER_CACHE);
+    return cachedData ? JSON.parse(cachedData) : [];
+  });
+
+  const fetchUsers = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.npoint.io/d08372d413d79e8056f1"
+      );
+      setUsers(response.data);
+      localStorage.setItem(USER_CACHE, JSON.stringify(response.data));
+    } catch (error) {
+      console.log(error?.message);
+    }
   };
 
   useEffect(() => {

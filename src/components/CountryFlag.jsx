@@ -18,6 +18,7 @@ const CountryFlag = () => {
         width: "24px",
         borderRadius: "4px",
         marginRight: "3px",
+        marginBottom: "2px",
       }}
     />
   );
