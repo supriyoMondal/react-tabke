@@ -38,6 +38,7 @@ const Table = ({ items, headings }) => {
                   <TableSortLabel
                     active={key === orderBy}
                     direction={order}
+                    disabled={!sortAble}
                     onClick={() => {
                       setSortProps({
                         order: order === "desc" ? "asc" : "desc",
@@ -49,12 +50,7 @@ const Table = ({ items, headings }) => {
                       textAlign: "center",
                       lineHeight: "20px",
                       fontWeight: "600",
-                      justifyContent:
-                        i === 0
-                          ? "flex-start"
-                          : i === headings.length - 1
-                          ? "flex-end"
-                          : "center",
+                      justifyContent: i === 0 ? "flex-start" : "center",
                     }}
                   >
                     {title}

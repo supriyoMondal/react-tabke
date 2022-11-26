@@ -32,8 +32,8 @@
 }
 
 .pie-chart {
-  height: 48px;
-  width: 48px;
+  height: 44px;
+  width: 44px;
   border: 1px solid #5f99dd;
   border-radius: 24px;
 }
@@ -48,7 +48,7 @@
 
 .status {
   display: flex !important;
-  min-width: 160px;
+  min-width: 190px;
   flex-direction: row;
   background-color: #fefaed;
   align-items: center;
@@ -87,4 +87,22 @@
 .fullscreen {
   margin-left: 0;
   margin-right: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  justify-content: center;
+}
+
+.icon-text {
+  position: absolute;
+  bottom: -14px;
+  font-size: 7px;
+  text-transform: uppercase;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #5f99dd;
 }

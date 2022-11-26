@@ -38,14 +38,7 @@ function App() {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        height: "90vh",
-        justifyContent: "center",
-      }}
-    >
+    <div className="container">
       <Table items={users} headings={headings} />
     </div>
   );

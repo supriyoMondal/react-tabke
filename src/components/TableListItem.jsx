@@ -58,19 +58,24 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
   if (key === "status") {
     return (
       <TableCell className="status">
-        <div
-          style={{ backgroundColor: colors.success }}
-          className="icon-container center"
-        >
-          <LibraryAddIcon className="icon" />
+        <div style={{ position: "relative" }}>
+          <div
+            style={{ backgroundColor: colors.success }}
+            className="icon-container center"
+          >
+            <LibraryAddIcon className="icon" />
+          </div>
+          <p className="icon-text">validation</p>
         </div>
-
         <div className="line" style={{ backgroundColor: colors.success }} />
-        <div
-          style={{ backgroundColor: colors.success }}
-          className="icon-container center"
-        >
-          <AssignmentOutlinedIcon className="icon" />
+        <div style={{ position: "relative" }}>
+          <div
+            style={{ backgroundColor: colors.success }}
+            className="icon-container center"
+          >
+            <AssignmentOutlinedIcon className="icon" />
+          </div>
+          <p className="icon-text">reconciliation</p>
         </div>
 
         <div className="line" style={{ backgroundColor: colors.success }} />
@@ -101,16 +106,22 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
               ]}
             />
             <p className="absolute-center">{netting_summary?.netted}%</p>
+            <p className="icon-text" style={{ bottom: "-7px" }}>
+              netting
+            </p>
           </div>
         ) : (
-          <div
-            className="icon-container center"
-            style={{
-              color: colors.primary,
-              border: "1px solid",
-            }}
-          >
-            <GridViewOutlinedIcon className="icon" />
+          <div style={{ position: "relative" }}>
+            <div
+              className="icon-container center"
+              style={{
+                color: colors.primary,
+                border: "1px solid",
+              }}
+            >
+              <GridViewOutlinedIcon className="icon" />
+            </div>
+            <p className="icon-text">netting</p>
           </div>
         )}
       </TableCell>
