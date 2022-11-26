@@ -88,8 +88,8 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
               className="pie-chart"
               data={[
                 {
-                  title: "oppertunity",
-                  value: netting_summary.oppertunity,
+                  title: "netted",
+                  value: netting_summary.netted,
                   color: "#99f5c5",
                 },
                 {
@@ -97,10 +97,9 @@ const TableListItem = ({ headerCell, item, index, headingsCount }) => {
                   value: netting_summary.unnetted,
                   color: "#dff3ec",
                 },
-
                 {
-                  title: "netted",
-                  value: netting_summary.netted,
+                  title: "oppertunity",
+                  value: netting_summary.oppertunity,
                   color: colors.primary,
                 },
               ]}
