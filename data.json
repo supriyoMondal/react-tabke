@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Subsidiary2Subsidiary12022_07_01_00_00_002022_08_13_00_00_001000.0USD",
+    "txn_date": "1st July",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary1",
+    "payee": "Subsidiary2",
+    "original": 1000,
+    "CCY": "$",
+    "TxnCCY": "USD",
+    "usd": 1000,
+    "status": "netting",
+    "netting_summary": {
+      "total": 100,
+      "oppertunity": 50,
+      "unnetted": 30,
+      "netted": 20
+    }
+  },
+  {
+    "name": "Subsidiary2Subsidiary12022_07_01_00_00_002022_08_13_00_00_0079004.0INR",
+    "txn_date": "2nd July",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary1",
+    "payee": "Subsidiary2",
+    "original": 79004,
+    "CCY": "₹",
+    "TxnCCY": "USD",
+    "usd": 1000,
+    "status": "netting",
+    "netting_summary": {
+      "total": 100,
+      "oppertunity": 70,
+      "unnetted": 30,
+      "netted": 0
+    }
+  },
+  {
+    "name": "Subsidiary3Subsidiary22022_07_01_00_00_002022_08_13_00_00_00864.35EUR",
+    "txn_date": "8th July",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary2",
+    "payee": "Subsidiary3",
+    "original": 864.35,
+    "CCY": "€",
+    "TxnCCY": "USD",
+    "usd": 899.98,
+    "status": "reconciled",
+    "netting": {}
+  },
+  {
+    "name": "Subsidiary3Subsidiary22022_07_01_00_00_002022_08_13_00_00_00749.09GBP",
+    "txn_date": "5th July",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary2",
+    "payee": "Subsidiary3",
+    "original": 749.09,
+    "CCY": "£",
+    "TxnCCY": "USD",
+    "usd": 899.99,
+    "status": "reconciled",
+    "netting": {}
+  },
+  {
+    "name": "Subsidiary1Subsidiary32022_07_01_00_00_002022_08_13_00_00_00768.319988EUR",
+    "txn_date": "10th July",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary3",
+    "payee": "Subsidiary1",
+    "original": 768.31,
+    "CCY": "€",
+    "TxnCCY": "USD",
+    "usd": 800,
+    "status": "validated",
+    "netting": {}
+  },
+  {
+    "name": "Subsidiary1Subsidiary32022_07_01_00_00_002022_08_13_00_00_00800.0USD",
+    "txn_date": "22nd August",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary3",
+    "payee": "Subsidiary1",
+    "original": 800,
+    "CCY": "$",
+    "TxnCCY": "USD",
+    "usd": 800,
+    "status": "validated",
+    "netting": {}
+  },
+  {
+    "name": "Subsidiary4Subsidiary32022_07_01_00_00_002022_08_13_00_00_00768.319988EUR",
+    "txn_date": "28st November",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary3",
+    "payee": "Subsidiary4",
+    "original": 768.31,
+    "CCY": "€",
+    "TxnCCY": "USD",
+    "usd": 800,
+    "status": "reconciled",
+    "netting": {}
+  },
+  {
+    "name": "Subsidiary4Subsidiary12022_07_01_00_00_002022_08_13_00_00_00800.0USD",
+    "txn_date": "29th December",
+    "due_date": "14 Days left",
+    "payer": "Subsidiary1",
+    "payee": "Subsidiary4",
+    "original": 800,
+    "CCY": "$",
+    "TxnCCY": "USD",
+    "usd": 800,
+    "status": "netting",
+    "netting_summary": {
+      "total": 100,
+      "oppertunity": 40,
+      "unnetted": 30,
+      "netted": 30
+    }
+  }
+]
